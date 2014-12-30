@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<style>
+  canvas {border-style:solid;}
+</style>
+<h1>Canvas</h1>
+<canvas id="canvas" height=500 width=1000>
+</canvas>
+
+<script src="canvas.js"></script>
+<script src="jquery.js"></script>
+
+</html>

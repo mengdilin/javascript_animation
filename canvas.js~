@@ -1,0 +1,26 @@
+var c = document.getElementById("canvas");
+var ctx = c.getContext("2d");
+var disc = function(x,y,dx,dy,ctx){
+    this.x=x;
+    this.y=y;
+    this.dx=dx;
+    this.dy=dy;
+    this.ctx=ctx;
+}
+disc.prototype.draw = function(){
+    this.ctx.beginPath();
+    this.ctx.arc(this.x, this.y, 50, 0.25 * Math.PI, 1.25 * Math.PI, false);
+    this.ctx.fillStyle = "rgb(255, 255, 0)";
+    this.ctx.fill();
+
+    this.ctx.beginPath();
+    this.ctx.arc(this.x, this.y, 50, 0.75 * Math.PI, 1.75 * Math.PI, false);
+    this.ctx.fill();
+
+    this.ctx.beginPath();
+    this.ctx.arc(this.x, this.y-25, 10, 0, 2 * Math.PI, false);
+    this.ctx.fillStyle = "rgb(0, 0, 0)";
+    this.ctx.fill();
+}
+
+d1 = new disc(1000,1000,10,10,ctx);
